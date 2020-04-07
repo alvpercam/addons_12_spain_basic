@@ -12,8 +12,8 @@ class AccountInvoice(models.Model):
         "Not included in 347 report",
         help="If you mark this field, this invoice will not be included in "
              "any AEAT 347 model report.",
-        default=False,
-        readonly=True,
+        default=True,
+        readonly=False,
         states={'draft': [('readonly', False)]},
     )
     # TODO: Añadir fecha para declaración 347
